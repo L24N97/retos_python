@@ -7,21 +7,20 @@ class LanzarDado:
         self.numero_dados = numero_dados
         self.numero_caras = numero_caras
 
-    def lanzar(self):
-        self.suerte = random.randint(1, self.numero_caras)
-
     def mostrar(self):
-        if self.numero_dados > 1:
-            for i in range(self.numero_dados):
-                print(self.suerte)
-        else:
-            print(self.suerte)
+        self.resultado = []
 
-        # print('Tirando dados...')
-        # time.sleep(self.suerte)
+        if self.numero_dados >= 1:
+            for i in range(0,self.numero_dados):
+                self.resultado.append(random.randint(1, self.numero_caras))
+                self.array = [str(a) for a in self.resultado]
+        print('Tirando dados...')
+        time.sleep( self.numero_caras )
 
+        print( '\n'.join(self.array) )
+        print('Tu resultado es: {}'.format( sum(self.resultado) ) )
 
-
-numero = LanzarDado(3, 5)
-numero.lanzar()
+numero = LanzarDado(2, 6)
 numero.mostrar()
+
+
