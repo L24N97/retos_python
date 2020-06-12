@@ -20,7 +20,23 @@ class LanzarDado:
         print( '\n'.join(self.array) )
         print('Tu resultado es: {}'.format( sum(self.resultado) ) )
 
-numero = LanzarDado(2, 6)
-numero.mostrar()
+def main():
+
+    num_dados = int(input( '¿Cuantos dados deseas? ~> '))
+    num_caras = int(input( '¿Cuantas caras deseas? ~> '))
+
+    while True:
+        lanzamiento = LanzarDado(num_dados, num_caras)
+        lanzamiento.mostrar()
+        continuar = input('¿Desea continuar? y|n ')
+
+        if continuar == 'y':
+            num_dados = int(input('¿Cuantos dados deseas? ~> '))
+            num_caras = int(input('¿Cuantas caras deseas? ~> '))
+        if continuar == 'n':
+            break
+
+if __name__ == '__main__':
+    main()
 
 
