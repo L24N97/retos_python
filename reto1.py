@@ -9,9 +9,13 @@ class Dados:
 
     def aleatorio(self):
         if self.numero_dados > 0 and self.numero_caras > 1:
-            for cara in range(self.numero_caras):
-                self.suerte = random.randint(1, self.numero_caras)
+            self.suerte = random.randint(1, self.numero_caras)
 
-    def __repr__(self):
-        pass
+    def mostrar(self):
+        print( self.suerte )
 
+
+#
+# numero = Dados(1, 6)
+# numero.aleatorio()
+# numero.mostrar()
