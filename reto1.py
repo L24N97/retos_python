@@ -22,8 +22,13 @@ class LanzarDado:
 
 def main():
 
-    num_dados = int(input( '¿Cuantos dados deseas? ~> '))
-    num_caras = int(input( '¿Cuantas caras deseas? ~> '))
+    while True:
+        try:
+            num_dados = int(input( '¿Cuantos dados deseas? ~> '))
+            num_caras = int(input( '¿Cuantas caras deseas? ~> '))
+            break
+        except ValueError:
+            print("Solo puedes ingresar numeros enteros positivos.")
 
     while True:
         lanzamiento = LanzarDado(num_dados, num_caras)
@@ -35,6 +40,8 @@ def main():
             num_caras = int(input('¿Cuantas caras deseas? ~> '))
         if continuar == 'n':
             break
+
+    print("Gracias por utilizarme!")
 
 if __name__ == '__main__':
     main()
