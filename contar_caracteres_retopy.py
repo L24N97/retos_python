@@ -4,5 +4,3 @@ def contarCaracter(string):
     if not string:
         return 'Debes ingresar una cadena de texto'
     return len(string)
-
-print(contarCaracter())
