@@ -3,4 +3,3 @@
 def cambiarArray(texto, caracter):
     return texto.split(caracter)
 
-print(cambiarArray('hola que tal', ' '))

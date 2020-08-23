@@ -8,4 +8,3 @@ def textoRecortado(texto, fin):
    return texto[:fin]
 
 
-print(textoRecortado('hola mundo', 4))
